@@ -3,6 +3,34 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>gitについて</title>
+		<style type="text/css">
+			h1,h2,p,li {
+				line-height: 1;
+				margin: 0;
+				padding: 0;
+			}
+
+			h1 {
+				margin-bottom: 30px;
+			}
+
+			h2 {
+				margin-bottom: 15px;
+			}
+
+			p,ul {
+				margin-bottom: 30px;
+			}
+
+			li {
+				margin-bottom: 15px;
+			}
+
+			p {
+				line-height: 1.3;
+				margin-bottom: 28px;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>gitについて</h1>
@@ -16,52 +44,70 @@
 			<li>ブランチを切ることで同じファイル複数人で編集することができる</li>
 		</ul>
 
-		<p>gitを使う時によく耳にするワード</p>
+		<h2>gitを使う時によく耳にするワード</h2>
 		<ul>
-			<li>repository（りぽじとり）</li>
-			<li>remote(repository)（りもーとりぽじとり）</li>
-			<li>local(repository)（ろーかるりぽじとり）</li>
-			<li>branch（ぶらんち）</li>
-			<li>commit（こみっと）</li>
-			<li>push（ぷっしゅ）</li>
-			<li>pull（ぷる）</li>
-			<li>stash（すたっしゅ）</li>
-			<li>merge（まーじ）</li>
+			<li>
+				<a href="#howto01">repository（リポジトリ）</a>
+			</li>
+			<li>
+				<a href="#howto02">remote(repository)（リモートリポジトリ）</a>
+			</li>
+			<li>
+				<a href="#howto03">local(repository)（ローカルリポジトリ）</a>
+			</li>
+			<li>
+				<a href="#howto04">branch（ブランチ）</a>
+			</li>
+			<li>
+				<a href="#howto05">commit（コミット）</a>
+			</li>
+			<li>
+				<a href="#howto06">push（プッシュ）</a>
+			</li>
+			<li>
+				<a href="#howto07">pull（プル）</a>
+			</li>
+			<li>
+				<a href="#howto08">stash（スタッシュ）</a>
+			</li>
+			<li>
+				<a href="#howto09">merge（マージ）</a>
+			</li>
 		</ul>
 
-		<h2>repository（りぽじとり）とは？</h2>
+		<h2 id="howto01">repository（リポジトリ）とは？</h2>
 		<p>ファイルやディレクトリの状態を記録する場所のこと</p>
 
-		<h2>remote(repository)（りもーとりぽじとり）とは？</h2>
+		<h2 id="howto02">remote(repository)（リモートリポジトリ）とは？</h2>
 		<p>サーバー上に存在する各プロダクト毎のリポジトリのこと<br />
 		ローカルで変更した内容を各々リモートいプッシュすることで共有や反映を行う</p>
 
-		<h2>local(repository)（ろーかるりぽじとり）とは？</h2>
+		<h2 id="howto03">local(repository)（ローカルリポジトリ）とは？</h2>
 		<p>自身のPC内にある各プロダクト毎のリポジトリのこと</p>
 
-		<h2>branch（ぶらんち）とは？</h2>
+		<h2 id="howto04">branch（ブランチ）とは？</h2>
 		<p>履歴の流れを分岐して記録していくためのもの<br />
 		リポジトリを作ると最初にmasterというブランチが作られる<br />
 		このmasterが所謂本番ソース</p>
 
-		<h2>commit（こみっと）とは？</h2>
+		<h2 id="howto05">commit（コミット）とは？</h2>
 		<p>ファイルやディレクトリの追加・変更を、リポジトリに記録すること<br />
 		コミットする際にコメントを設定できるので、ちゃんとしたコメントを設定しておくと<br />
 		他の人や、後々作業する時に一目で何をしたのか判断しやすくなる</p>
 
-		<h2>push（ぷっしゅ）とは？</h2>
+		<h2 id="howto06">push（プッシュ）とは？</h2>
 		<p>コミットした内容をリモートに反映すること<br />
 		プッシュをしない限り、変更内容は自身のローカルでしか確認できない</p>
 
-		<h2>pull（ぷる）とは？</h2>
+		<h2 id="howto07">pull（プル）とは？</h2>
 		<p>他の人が変更してリモートにプッシュした内容を自身のローカルに取り込むこと<br />
 		プルをしない限り、他の人が変更した内容が自身のローカルに反映されることはない</p>
 
-		<h2>stash（すたっしゅ）とは？</h2>
+		<h2 id="howto08">stash（スタッシュ）とは？</h2>
 		<p>変更したファイルを一時避難すること<br />
 		作業中に他の優先度が高い作業が来た時などに使う</p>
 
-		<h2>merge（まーじ）とは？</h2>
+		<h2 id="howto09">merge（マージ）とは？</h2>
 		<p>他の人の作業内容を取り込むこと<br />
 		同じリポジトリで複数人が作業している場合、マージをしないでプッシュすると他の人の作業内容が消えるため注意が必要</p>
 	</body>
