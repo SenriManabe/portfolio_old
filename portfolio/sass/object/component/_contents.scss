@@ -232,6 +232,7 @@
 			left: -9999px;
 			right: -9999px;
 			margin: auto;
+			width: auto;
 		}
 	}
 	.c-contents--component {
@@ -295,5 +296,8 @@
 	}
 	.c-contents--component--center--sp {
 		text-align: left;
+		.c-link--center {
+			text-align: center;
+		}
 	}
 }
