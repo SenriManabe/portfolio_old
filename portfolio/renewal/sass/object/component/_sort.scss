@@ -1,0 +1,39 @@
+.c-sort-cover {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	@include fsize(18);
+	margin-bottom: 50px;
+	justify-content: center;
+}
+
+.c-sort-box {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	color: #333;
+}
+
+.c-sort-action {
+	margin-right: 25px;
+	color: #b5b5b5;
+	&:last-child {
+		margin-right: 0;
+	}
+	&:hover,
+	&.is-active {
+		cursor: pointer;
+		color: #333;
+		text-decoration: underline;
+	}
+}
+
+@media screen and (min-width:320px) and (max-width:959px) {
+	.c-sort-cover {
+		display: none;
+	}
+}

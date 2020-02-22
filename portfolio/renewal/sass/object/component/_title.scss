@@ -1,0 +1,49 @@
+.c-title {
+	display: block;
+	line-height: 1;
+}
+
+.c-title--main {
+	width: 100vw;
+	position: absolute;
+	top: 50%;
+	margin: -8% auto 0;
+	color: $_colorText;
+	@include fsize(25);
+	text-align: center;
+	z-index: 2;
+	&--thanks {
+		top: 45%;
+		line-height: 1.5;
+	}
+}
+
+.c-title--contents{
+	margin: 0 0 25px 25px;
+	font-family: 'comodo';
+	@include fsize(24);
+	&--works {
+		margin-bottom: 0;
+	}
+	&--sub {
+		margin-top: 0;
+		@include fsize(18);
+	}
+	&--details {
+		margin-bottom: 15px;
+		margin-left: 0;
+		@include fsize(24);
+		span {
+			display: block;
+			margin-bottom: 15px;
+			@include fsize(12);
+		}
+	}
+}
+
+.c-title--works-detail {
+	font-family: 'ABSTER';
+	@include fsize(32);
+	margin: 120px 0 40px;
+	letter-spacing: 2px;
+}
