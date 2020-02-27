@@ -407,6 +407,10 @@
 		height: calc(776px / 1.5);
 	}
 
+	.c-contents__item__img-cage--slider {
+		margin-top: 45px;
+	}
+
 	.c-contents__item--works-detail--info {
 		text-align: center;
 		.c-contents__item__text-cage {
@@ -417,6 +421,12 @@
 		.c-contents__item__img--no-slider {
 			left: 50%;
 			transform: translate(-50%, -50%);
+		}
+		.c-contents__item__img {
+			left: 50%;
+			transform: translateX(-50%);
+			width: auto;
+			height: 100%;
 		}
 	}
 }
