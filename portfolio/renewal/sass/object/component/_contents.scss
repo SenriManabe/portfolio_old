@@ -418,15 +418,17 @@
 				padding-top: 30px;
 			}
 		}
-		.c-contents__item__img--no-slider {
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
 		.c-contents__item__img {
 			left: 50%;
 			transform: translateX(-50%);
 			width: auto;
 			height: 100%;
+		}
+		.c-contents__item__img--no-slider {
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: auto;
 		}
 	}
 }

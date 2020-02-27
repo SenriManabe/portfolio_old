@@ -221,7 +221,7 @@ $(function(){
 	function show(){
 		$kvSlider.children().eq(count).removeClass('is-active');
 		$kvSlider.children().eq(count).next().addClass('is-active');
-		if (count == 2) {
+		if (count == 4) {
 			count = 0;
 			$kvSlider.children().eq(count).addClass('is-active');
 		} else {
