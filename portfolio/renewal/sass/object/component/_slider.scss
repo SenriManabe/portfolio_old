@@ -253,8 +253,10 @@ img.c-kv-slider__item__cage__img--kv {
 
 @media screen and (min-width:320px) and (max-width:959px) {
 	.c-kv-slider__item__cage {
-		width: 80%;
+		width: 30vh;
 		z-index: 2;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 	img.c-kv-slider__img,
 	img.c-kv-slider__item__cage__img--kv {
