@@ -45,7 +45,14 @@
 .c-title--works-index {
 	font-family: 'ABSTER';
 	@include fsize(32);
-	margin: 120px 0 40px;
+	margin: 38vh auto;
+	letter-spacing: 2px;
+}
+
+.c-title--timeline {
+	font-family: 'ABSTER';
+	@include fsize(32);
+	margin: 25% auto 20%;
 	letter-spacing: 2px;
 }
 
@@ -69,5 +76,9 @@
 			margin-top: 45px;
 			margin-bottom: 15px;
 		}
+	}
+	.c-title--timeline {
+		margin: 36vh auto;
+		line-height: 1.5;
 	}
 }

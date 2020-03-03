@@ -963,6 +963,9 @@ input, button, textarea, select {
   .c-contents-works-list__item:active {
     box-shadow: inset 3px 3px 6px #aaa, inset -3px -3px 6px rgba(255, 255, 255, 0.5); }
 
+.c-contents-cover--timeline {
+  width: 100%; }
+
 @media screen and (min-width: 320px) and (max-width: 959px) {
   .c-contents--component {
     padding: 100px 50px; }
@@ -1937,11 +1940,22 @@ img.c-kv-slider__item__cage__img--kv {
   font-family: 'ABSTER';
   font-size: 32px;
   font-size: 2rem;
-  margin: 120px 0 40px;
+  margin: 38vh auto;
   letter-spacing: 2px; }
   @media (max-width: 560px) {
     .c-title--works-detail,
     .c-title--works-index {
+      font-size: 32px;
+      font-size: 10vw; } }
+
+.c-title--timeline {
+  font-family: 'ABSTER';
+  font-size: 32px;
+  font-size: 2rem;
+  margin: 25% auto 20%;
+  letter-spacing: 2px; }
+  @media (max-width: 560px) {
+    .c-title--timeline {
       font-size: 32px;
       font-size: 10vw; } }
 
@@ -1966,7 +1980,11 @@ img.c-kv-slider__item__cage__img--kv {
 
   .c-contents__item--works-detail--info .c-title--works-detail {
     margin-top: 45px;
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+
+  .c-title--timeline {
+    margin: 36vh auto;
+    line-height: 1.5; } }
 /* 汎用クラス */
 /* style
 ------------------------------------------------------- */
