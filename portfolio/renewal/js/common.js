@@ -43,6 +43,8 @@ var menuAction = '.js-menu-action',
 	$topMargin = $(topMargin),
 	kvSlider = '.js-kv-slider',
 	$kvSlider = $(kvSlider),
+	navTrigger = '.js-nav-trigger',
+	$navTrigger = $(navTrigger),
 	wHeight = $contents.eq(0).outerHeight(),
 	liCount =  0;
 
@@ -199,14 +201,10 @@ $imgSize.each(function() {
 	});
 });
 
-// Lottie
-// lottie.loadAnimation({
-// 	container: document.getElementById('lottie'), // アニメーションをさせたいdivなどhtml要素ににつけた名前
-// 	renderer: 'svg',
-// 	loop: false,
-// 	autoplay: true,
-// 	path: 'js/data.json' // 自分が書き出したjsonファイルの名前と場所（パス）を記述
-// });
+$navTrigger.on('click', function(event) {
+	$(this).toggleClass('is-active');
+	$(this).next().fadeToggle();
+});
 
 $(function(){
 	var count = 0,
