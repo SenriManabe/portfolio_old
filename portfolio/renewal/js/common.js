@@ -208,7 +208,8 @@ $navTrigger.on('click', function(event) {
 
 $(function(){
 	var count = 0,
-		interval = 5000;
+		interval = 5000
+		length = ($kvSlider.children().length) - 1;
 
 	var timer = setInterval(show, interval);
 	$('.js-count-stop').hover(function(){
@@ -219,7 +220,7 @@ $(function(){
 	function show(){
 		$kvSlider.children().eq(count).removeClass('is-active');
 		$kvSlider.children().eq(count).next().addClass('is-active');
-		if (count == 4) {
+		if (count == length) {
 			count = 0;
 			$kvSlider.children().eq(count).addClass('is-active');
 		} else {
