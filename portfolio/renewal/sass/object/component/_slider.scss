@@ -283,6 +283,7 @@ img.c-kv-slider__item__cage__img--kv {
 
 	.c-kv-slider__title {
 		@include fsize(30);
+		line-height: 1.2;
 	}
 
 	.c-kv-slider__link {
