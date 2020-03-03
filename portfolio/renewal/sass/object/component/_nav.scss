@@ -6,6 +6,12 @@
 	right: 50px;
 }
 
+.c-nav--top {
+	.c-nav__item__link {
+		color: #fff;
+	}
+}
+
 .c-nav__item {
 	font-family: 'ABSTER';
 	@include fsize(18);

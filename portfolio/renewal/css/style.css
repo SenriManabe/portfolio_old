@@ -534,7 +534,7 @@ input, button, textarea, select {
   left: 0;
   line-height: 1;
   padding: 25px;
-  margin-bottom: -102px;
+  margin-bottom: -119px;
   z-index: 10;
   transition: .3s;
   text-align: center;
@@ -543,7 +543,7 @@ input, button, textarea, select {
 
 @media screen and (min-width: 320px) and (max-width: 959px) {
   .l-header {
-    margin-bottom: -86px; } }
+    margin-bottom: -97px; } }
 .l-wrapper {
   position: relative;
   padding-top: 120px; }
@@ -1413,6 +1413,9 @@ input, button, textarea, select {
   position: absolute;
   right: 50px; }
 
+.c-nav--top .c-nav__item__link {
+  color: #fff; }
+
 .c-nav__item {
   font-family: 'ABSTER';
   font-size: 18px;
@@ -1945,7 +1948,8 @@ img.c-kv-slider__item__cage__img--kv {
   .c-title--works-detail,
   .c-title--works-index {
     font-size: 24px;
-    font-size: 1.5rem; } }
+    font-size: 1.5rem;
+    line-height: 1.5; } }
   @media screen and (min-width: 320px) and (max-width: 959px) and (max-width: 560px) {
     .c-title--works-detail,
     .c-title--works-index {
