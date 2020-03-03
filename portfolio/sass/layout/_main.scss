@@ -1,9 +1,18 @@
 .l-wrapper{
     position:relative;
+    padding-top: 120px;
+}
+
+.l-wrapper--top {
+	margin: 0;
+	padding: 0;
 }
 
 .l-main {
     width: 100%;
     height: 100%;
     position:relative;
+}
+
+@media screen and (min-width:320px) and (max-width:959px) {
 }

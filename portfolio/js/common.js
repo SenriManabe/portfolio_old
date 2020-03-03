@@ -35,6 +35,16 @@ var menuAction = '.js-menu-action',
 	$sortContents = $(sortContents),
 	imgPath = '.js-imgPath',
 	$imgPath = $(imgPath),
+	first = '.js-first',
+	$first = $(first),
+	imgSize = '.js-img-size',
+	$imgSize = $(imgSize),
+	topMargin = '.js-top-margin',
+	$topMargin = $(topMargin),
+	kvSlider = '.js-kv-slider',
+	$kvSlider = $(kvSlider),
+	navTrigger = '.js-nav-trigger',
+	$navTrigger = $(navTrigger),
 	wHeight = $contents.eq(0).outerHeight(),
 	liCount =  0;
 
@@ -175,4 +185,54 @@ $imgPath.each(function() {
 		$(this).attr('src', path);
 		console.log(path);
 	}
+});
+
+$(function(){
+	setTimeout(function(){
+		$first.fadeOut();
+	},3000);
+});
+
+$imgSize.each(function() {
+	var imgHeight = $(this).outerHeight();
+	
+	$topMargin.css({
+		marginTop: imgHeight - 10
+	});
+});
+
+$navTrigger.on('click', function(event) {
+	$(this).toggleClass('is-active');
+	$(this).next().fadeToggle();
+});
+
+$(function(){
+	var count = 0,
+		interval = 5000
+		length = ($kvSlider.children().length) - 1;
+
+	var timer = setInterval(show, interval);
+	$('.js-count-stop').hover(function(){
+		clearInterval(timer);
+    }, function(){
+		timer = setInterval(show, interval);
+    })
+	function show(){
+		$kvSlider.children().eq(count).removeClass('is-active');
+		$kvSlider.children().eq(count).next().addClass('is-active');
+		if (count == length) {
+			count = 0;
+			$kvSlider.children().eq(count).addClass('is-active');
+		} else {
+			count++;
+		}
+	}
+});
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+// window resize
+window.addEventListener('resize', () => {
+    vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 });

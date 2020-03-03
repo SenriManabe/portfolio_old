@@ -1,11 +1,15 @@
 .c-footer-cover {
 	display: block;
 	position: relative;
-	padding: 0 0 25px;
+	padding: 0 0 50px;
 	line-height: 1;
 	text-align: center;
 	>:last-child {
 		margin-left: auto;
+	}
+	&--top {
+		padding-bottom: 25px;
+		color: $_bgWhite;
 	}
 }
 
