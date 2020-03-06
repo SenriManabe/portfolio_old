@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>SeDes PORTFOLIO</title>
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="/css/style.css" />
 		<meta name="description" content="デザイナーSeDesのポートフォリオサイトです。対応可能サービスや過去の実績、どんなコンセプトでデザインをしているかをご紹介しています。誰かに何かを伝える時には、「無駄がなく、簡潔に、相手にわかるように」伝えるのが最適だと思っています。" />
 		<meta name="keywords" content="web,web制作,ロゴ,ディレクション,フロントエンド,コーディング,ロゴ,CI,デザイン,デザイナー" />
 		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
@@ -17,14 +17,13 @@
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
 		<meta name="robots" content="noindex">
-		<script src="https://sdk.form.run/js/v2/formrun.js"></script>
 	</head>
-	<body>
+	<body class="js-ajax-change">
 		<div class="l-wrapper l-wrapper--top js-wrapper">
 			<header class="l-header js-header u-ff-pf">
 				<div class="c-logo">
 					<h1>
-						<a href="./index.html"><img src="./img/logo-top.svg" alt="SeDes" class="c-logo__item" width="180"></a>
+						<a href="/" class="js-ajax-link"><img src="/img/logo-top.svg" alt="SeDes" class="c-logo__item" width="180"></a>
 					</h1>
 				</div>
 				<div class="c-nav-trigger c-nav-trigger--top js-nav-trigger">
@@ -33,9 +32,9 @@
 					<span class="c-nav-trigger__item"></span>
 				</div>
 				<ul class="c-nav c-nav--top">
-					<li class="c-nav__item is-active"><a href="./index.html" class="c-nav__item__link is-active">TOP</a></li>
-					<li class="c-nav__item"><a href="./works/index.html" class="c-nav__item__link">WORKS</a></li>
-					<li class="c-nav__item"><a href="./timeline/index.html" class="c-nav__item__link">TIMELINE</a></li>
+					<li class="c-nav__item is-active"><a href="/" class="c-nav__item__link js-ajax-link is-active">TOP</a></li>
+					<li class="c-nav__item"><a href="/works/" class="c-nav__item__link js-ajax-link">WORKS</a></li>
+					<li class="c-nav__item"><a href="/timeline/" class="c-nav__item__link js-ajax-link">TIMELINE</a></li>
 				</ul>
 			</header>
 			<div class="l-main">
@@ -45,89 +44,88 @@
 							<div class="c-kv-slider c-kv-slider--main is-active">
 								<div class="c-kv-slider__item">
 									<div class="c-kv-slider__item__cage">
-										<a href="works/car-share/index.html" class="c-kv-slider__link js-count-stop">
-											<img src="img/kv/car-share_img.png" alt="car share app" class="c-kv-slider__item__cage__img">
+										<a href="/works/car-share/" class="c-kv-slider__link js-count-stop js-ajax-link">
+											<img src="/img/kv/car-share_img.png" alt="car share app" class="c-kv-slider__item__cage__img">
 										</a>
-										<img src="img/kv/car-share.jpg" alt="car share" class="c-kv-slider__item__cage__img--kv">
+										<img src="/img/kv/car-share.jpg" alt="car share" class="c-kv-slider__item__cage__img--kv">
 									</div>
 									<div class="c-kv-slider__item__cage__text">
 										<p class="c-kv-slider__tag">UIUX DESIGN</p>
 										<h2 class="c-kv-slider__title">CAR SHARE APP RENE<span>W</span>AL</h2>
-										<a href="works/car-share/index.html" class="c-kv-slider__link js-count-stop">READ MORE</a>
+										<p class="c-kv-slider__read">とあるカーシェアアプリのリニューアルデザイン案です。<br/>iOS&AndroidアプリUX設計、UIデザインを担当しました。</p>
+										<a href="/works/car-share/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</a>
 									</div>
-									<img src="img/kv/car-share.jpg" alt="car share" class="c-kv-slider__img">
+									<img src="/img/kv/car-share.jpg" alt="car share" class="c-kv-slider__img">
 								</div>
 							</div>
 							<div class="c-kv-slider c-kv-slider--main">
 								<div class="c-kv-slider__item">
 									<div class="c-kv-slider__item__cage">
-										<a href="works/hakobiya/index.html" class="c-kv-slider__link js-count-stop">
-											<img src="img/kv/hakobiya_img.png" alt="HAKOBIYA app" class="c-kv-slider__item__cage__img">
+										<a href="/works/hakobiya/" class="c-kv-slider__link js-count-stop js-ajax-link">
+											<img src="/img/kv/hakobiya_img.png" alt="HAKOBIYA app" class="c-kv-slider__item__cage__img">
 										</a>
 									</div>
 									<div class="c-kv-slider__item__cage__text">
 										<p class="c-kv-slider__tag">UIUX DESIGN</p>
 										<h2 class="c-kv-slider__title">HAKOBI<span>Y</span>A APP DESIGN</h2>
-										<a href="works/hakobiya/index.html" class="c-kv-slider__link js-count-stop">READ MORE</a>
+										<p class="c-kv-slider__read">「旅を仕事にしよう」というコンセプトを基に、海外旅行者と海外製品がほしい人をマッチングさせるアプリです。<br/>iOS&AndroidアプリUX設計、UIデザインを担当しました。</p>
+										<a href="/works/hakobiya/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</a>
 									</div>
-									<img src="img/kv/hakobiya.jpg" alt="HAKOBIYA" class="c-kv-slider__img">
+									<img src="/img/kv/hakobiya.jpg" alt="HAKOBIYA" class="c-kv-slider__img">
 								</div>
 							</div>
 							<div class="c-kv-slider c-kv-slider--main">
 								<div class="c-kv-slider__item">
 									<div class="c-kv-slider__item__cage">
-										<a href="works/lunchiru/index.html" class="c-kv-slider__link js-count-stop">
-											<img src="img/kv/lunchiru_img.png" alt="LUNCHIRU app" class="c-kv-slider__item__cage__img">
+										<a href="/works/lunchiru/" class="c-kv-slider__link js-count-stop js-ajax-link">
+											<img src="/img/kv/lunchiru_img.png" alt="LUNCHIRU app" class="c-kv-slider__item__cage__img">
 										</a>
 									</div>
 									<div class="c-kv-slider__item__cage__text">
 										<p class="c-kv-slider__tag">UIUX DESIGN</p>
 										<h2 class="c-kv-slider__title">LUNCHIRU APP DESIGN</h2>
-										<a href="works/lunchiru/index.html" class="c-kv-slider__link js-count-stop">READ MORE</a>
+										<p class="c-kv-slider__read">芦屋市との協働によるプロジェクトで、小中学校や保育所の給食の献立表が簡単に見れるアプリです。<br/>iOS&Androidアプリのロゴデザイン、UX設計、UIデザインを担当しました。</p>
+										<a href="/works/lunchiru/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</a>
 									</div>
-									<img src="img/kv/lunchiru.jpg" alt="LUNCHIRU" class="c-kv-slider__img">
+									<img src="/img/kv/lunchiru.jpg" alt="LUNCHIRU" class="c-kv-slider__img">
 								</div>
 							</div>
 							<div class="c-kv-slider c-kv-slider--main">
 								<div class="c-kv-slider__item">
 									<div class="c-kv-slider__item__cage c-kv-slider__item__cage--no-app">
-										<a href="works/darkforce/index.html" class="c-kv-slider__link js-count-stop">
-											<img src="img/works/darkforce/darkforce_item01.png" alt="DarkForce LOGO" class="c-kv-slider__item__cage__img">
+										<a href="/works/darkforce/" class="c-kv-slider__link js-count-stop js-ajax-link">
+											<img src="/img/works/darkforce/darkforce_item01.png" alt="DarkForce LOGO" class="c-kv-slider__item__cage__img">
 										</a>
 									</div>
 									<div class="c-kv-slider__item__cage__text c-kv-slider__item__cage__text--no-app">
 										<p class="c-kv-slider__tag">LOGO DESIGN</p>
 										<h2 class="c-kv-slider__title">DARK FORCE</h2>
-										<a href="works/darkforce/index.html" class="c-kv-slider__link js-count-stop">READ MORE</a>
+										<p class="c-kv-slider__read">自分が代表(？)をやっている、とあるゲームサークルのロゴを作成しました。<br/>ロゴデザイン・運営を担当しました。</p>
+										<a href="/works/darkforce/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</a>
 									</div>
-									<img src="img/kv/darkforce.png" alt="DarkForce" class="c-kv-slider__img">
+									<img src="/img/kv/darkforce.png" alt="DarkForce" class="c-kv-slider__img">
 								</div>
 							</div>
 							<div class="c-kv-slider c-kv-slider--main">
 								<div class="c-kv-slider__item">
 									<div class="c-kv-slider__item__cage c-kv-slider__item__cage--no-app">
-										<a href="works/hakobiya-logo/index.html" class="c-kv-slider__link js-count-stop">
-											<img src="img/kv/hakobiya-logo_img.png" alt="HAKOBIYA LOGO" class="c-kv-slider__item__cage__img">
+										<a href="/works/hakobiya-logo/" class="c-kv-slider__link js-count-stop js-ajax-link">
+											<img src="/img/kv/hakobiya-logo_img.png" alt="HAKOBIYA LOGO" class="c-kv-slider__item__cage__img">
 										</a>
 									</div>
 									<div class="c-kv-slider__item__cage__text c-kv-slider__item__cage__text--no-app">
 										<p class="c-kv-slider__tag">LOGO DESIGN</p>
 										<h2 class="c-kv-slider__title">HAKOBIYA</h2>
-										<a href="works/hakobiya-logo/index.html" class="c-kv-slider__link js-count-stop">READ MORE</a>
+										<p class="c-kv-slider__read">UIデザインも手がけたサービスのリニューアルロゴ案を作成しました。<br>HとAを使い、地球をモチーフにこのロゴを作成しました。</p>
+										<a href="/works/hakobiya-logo/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</a>
 									</div>
-									<img src="img/kv/hakobiya-logo.png" alt="HAKOBIYA" class="c-kv-slider__img">
+									<img src="/img/kv/hakobiya-logo.png" alt="HAKOBIYA" class="c-kv-slider__img">
 								</div>
 							</div>
 						</div>
 					</section>
 				</div>
 			</div>
-			<!-- <ul class="c-nav">
-				<li class="c-nav__item is-active"><a href="/" class="c-nav__item__link"></a></li>
-				<li class="c-nav__item"><a href="works/index.html" class="c-nav__item__link"></a></li>
-				<li class="c-nav__item"><a href="timeline/index.html" class="c-nav__item__link"></a></li>
-				<li class="c-nav__item"><a href="contact/index.html" class="c-nav__item__link"></a></li>
-			</ul> -->
 			<footer class="l-footer l-footer--top">
 				<div class="c-footer-cover c-footer-cover--top u-cf">
 					<copy>&copy; 2020 SeDes.</copy>
@@ -135,8 +133,8 @@
 			</footer>
 		</div>
 	</body>
-	<script src="./js/jquery-3.2.1.min.js" ></script>
-	<!-- <script src="./js/lottie.js" ></script>
-	<script src="./js/logo_animation.js" ></script> -->
-	<script src="./js/common.js" ></script>
+	<script src="/js/jquery-3.2.1.min.js" ></script>
+	<!-- <script src="/js/lottie.js" ></script>
+	<script src="/js/logo_animation.js" ></script> -->
+	<script src="/js/common.js" ></script>
 </html>

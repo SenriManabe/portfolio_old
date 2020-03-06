@@ -334,7 +334,11 @@
 .c-contents-works-list__item {
 	display: block;
 	width: calc(50% - 25px);
+	position: relative;
 	transition: .3s;
+	background-color: #dedede;
+	top: 30px;
+	opacity: 0;
 	&:nth-child(2n) {
 		margin-left: 50px;
 	}
@@ -348,7 +352,6 @@
 		height: 321px;
 		@include fsize(30);
 		font-family: 'ABSTER';
-		background-color: #dedede;
 		a {
 			display: table-cell;
 			vertical-align: middle;
@@ -366,6 +369,32 @@
 		box-shadow: inset 3px 3px 6px #aaa, inset -3px -3px 6px rgba(255, 255, 255, .5);
 	}
 }
+
+/** ↓ ここからふわっとアニメーション設定 ↓ **/
+@mixin animationValue( $name, $duration, $function, $delay, $count, $state){
+	animation: $name $duration+s $function $delay+s $count $state;
+}
+@for $cnt from 1 through 6{
+	.c-contents-works-list__item:nth-child(#{$cnt}){
+		@include animationValue(fadeContents01, .3, ease-in-out, $cnt * 0.3 , 1, forwards);
+	}
+}
+@keyframes fadeContents01 {
+	0% {
+		opacity: 0;
+		top: 10px;
+	}
+	100% {
+		opacity: 1;
+		top: 0;
+	}
+}
+@mixin keyframes($name) {
+	@keyframes #{$name} {
+		@content;
+	} 
+}
+/** ↑ ここまでふわっとアニメーション設定 ↑ **/
 
 .c-contents-cover--timeline {
 	width: 100%;
