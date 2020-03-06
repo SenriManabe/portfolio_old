@@ -21,6 +21,8 @@ var form = '.js-form',
 	$navTrigger = $(navTrigger),
 	ajaxLink = '.js-ajax-link',
 	$ajaxLink = $(ajaxLink),
+	ajaxChange = '.js-ajax-change',
+	$ajaxChange = $(ajaxChange),
 	wHeight = $contents.eq(0).outerHeight(),
 	liCount =  0;
 
@@ -103,3 +105,36 @@ window.addEventListener('resize', () => {
     vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+var lastpage = "index.html",
+	now = location.href;
+
+$(window).on('popstate', function(event){
+	$ajaxChange.fadeOut(300, function() {
+		getPage(now);
+	});
+});
+
+$ajaxLink.on('click', function(event) {
+	event.preventDefault();
+	var link = $(this).attr("href");
+
+	$ajaxChange.fadeOut(300, function() {
+		getPage(link);
+	});
+});
+
+function getPage(elm){
+	$.ajax({
+		type: 'GET',
+		url: elm,
+		dataType: 'html',
+		success: function(data){
+			$ajaxChange.html(data).fadeIn(300);
+			history.pushState(null, null, elm);
+		},
+		error:function() {
+			console.log('ERROR!!!!');
+		}
+	});
+}

@@ -1,0 +1,1 @@
+docker run --name ajaxText -p 8090:80 -v $PWD/portfolio:/usr/share/nginx/html -d nginx
