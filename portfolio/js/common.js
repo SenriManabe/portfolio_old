@@ -107,11 +107,11 @@ window.addEventListener('resize', () => {
 });
 
 var lastpage = "index.html",
-	now = location.href;
+	ref = document.referrer;
 
 $(window).on('popstate', function(event){
 	$ajaxChange.fadeOut(300, function() {
-		getPage(now);
+		getPage(ref);
 	});
 });
 
