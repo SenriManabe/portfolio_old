@@ -1,4 +1,3 @@
-// include jQuery
 var form = '.js-form',
 	$form = $(form),
 	formBtn = '.js-form-btn',
@@ -25,47 +24,6 @@ var form = '.js-form',
 	$ajaxChange = $(ajaxChange),
 	wHeight = $contents.eq(0).outerHeight(),
 	liCount =  0;
-
-//form関係はそのうち使うかもしれないからコメントアウト
-// $formBtn.on('click', function(e) {
-// 	e.preventDefault();
-
-// 	var nameVal = $inputName.val(),
-// 		mailVal = $inputMail.val(),
-// 		textVal = $textArea.val();
-
-// 	if (nameVal.length != 0 && mailVal.length != 0 && textVal.length != 0) {
-// 		$inputAdd.removeClass('is-error');
-// 		$confirm.append('<div class="c-form-overlay"><div class="c-form-confirm"><h2 class="c-title c-title--contents">Confirm<br/><span class="c-title__caption">-内容確認-</span></h2><p class="c-contents__item__text u-mb25">以下の内容で送信してよろしいでしょうか？</p><div class="c-form"><p class="c-form__name">NAME</p><p class="c-form__val_confirm js-val-confirm">' + nameVal + '</p><p class="c-form__name">E-MAIL</p><p class="c-form__val_confirm js-val-confirm">' + mailVal + '</p><p class="c-form__name">CONTENT</p><p class="c-form__val_confirm js-val-confirm">' + textVal + '</p><div class="c-form-btn-box"><p class="c-form__input c-form__input--btn js-form-btn--submit">送信する</p><p class="c-form__input c-form__input--btn c-form__input--btn--cancel js-form-btn--cancel">キャンセルする</p></div></div></div></div>');
-// 	} else {
-// 		$inputAdd.removeAttr('placeholder');
-// 		if(nameVal.length == 0) {
-// 			$inputName.attr('placeholder', '正しい内容を入力してください。');
-// 			$inputName.addClass('is-error');
-// 		}
-// 		if(mailVal.length == 0) {
-// 			$inputMail.attr('placeholder', '正しい内容を入力してください。');
-// 			$inputMail.addClass('is-error');
-// 		}
-// 		if(textVal.length == 0) {
-// 			$textArea.addClass('is-error');
-// 		}
-// 	}
-// });
-
-// $inputAdd.on('keydown', function() {
-// 	if ($(this).val() != 0) {
-// 		$(this).removeClass('is-error');
-// 	}
-// });
-
-// $confirm.on('click', '.js-form-btn--cancel', function(e) {
-// 	$confirm.empty();
-// });
-
-// $confirm.on('click', '.js-form-btn--submit', function(e) {
-// 	$form.submit();
-// });
 
 // SPのGnavi設定
 $navTrigger.on('click', function(event) {
