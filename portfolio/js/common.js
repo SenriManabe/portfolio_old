@@ -115,7 +115,7 @@ $(window).on('popstate', function(event){
 	});
 });
 
-$ajaxLink.on('click', function(event) {
+$(document).on('click', ajaxLink, function(event) {
 	event.preventDefault();
 	var link = $(this).attr("href");
 
