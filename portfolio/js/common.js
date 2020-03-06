@@ -94,7 +94,6 @@ function getPage(elm){
 		success: function(data){
 			$ajaxChange.html(data).fadeIn(300);
 			history.pushState(null, null, elm);
-			clearInterval(timer);
 		},
 		error:function() {
 			console.log('ERROR!!!!');
