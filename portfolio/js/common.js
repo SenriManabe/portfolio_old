@@ -56,7 +56,7 @@ $(function(){
 });
 
 // view height設定
-let vh = window.innerHeight * 0.01;
+var vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 // window resize
 window.addEventListener('resize', () => {
