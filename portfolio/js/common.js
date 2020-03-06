@@ -6,7 +6,7 @@ var kvSlider = '.js-kv-slider',
 	$ajaxLink = $(ajaxLink),
 	ajaxChange = '.js-ajax-change',
 	$ajaxChange = $(ajaxChange),
-	liCount =  0;
+	count =  0;
 
 // SPのGnavi設定
 function menu(){
@@ -19,8 +19,7 @@ function menu(){
 // fade slider設定
 function slider(){
 	$(function(){
-		var count = 0,
-			interval = 5000
+		var interval = 5000,
 			length = ($kvSlider.children().length) - 1;
 
 		var timer = setInterval(show, interval);
@@ -58,9 +57,6 @@ var ref = document.referrer;
 $(window).on('popstate', function(event){
 	$ajaxChange.fadeOut(300, function() {
 		getPage(ref);
-		if ($kvSlider.length == 1) {
-			slider();
-		}
 	});
 });
 
@@ -70,9 +66,6 @@ $(document).on('click', ajaxLink, function(event) {
 
 	$ajaxChange.fadeOut(300, function() {
 		getPage(link);
-		if ($kvSlider.length == 1) {
-			slider();
-		}
 	});
 });
 
@@ -93,7 +86,5 @@ function getPage(elm){
 
 /** 初回ロード時にコールバックを実行 **/
 menu();
-if ($kvSlider.length == 1) {
-	slider();
-}
+// slider();
 vhConf();
