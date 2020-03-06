@@ -1838,7 +1838,7 @@ img.c-kv-slider__item__cage__img--kv {
 
   .c-kv-slider__item__cage__text {
     width: 85%;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%); }
 
   .c-kv-slider__tag {
@@ -1879,7 +1879,18 @@ img.c-kv-slider__item__cage__img--kv {
     margin-left: 0; }
 
   .c-kv-slider__read {
-    display: none; } }
+    display: none; }
+
+  .c-kv-slider-pn__item {
+    width: 20px;
+    height: 20px;
+    border: 0px;
+    border-top: solid 4px rgba(255, 255, 255, 0.5);
+    border-right: solid 4px rgba(255, 255, 255, 0.5); }
+    .c-kv-slider-pn__item:first-child {
+      left: 10px; }
+    .c-kv-slider-pn__item:last-child {
+      right: 10px; } }
 .c-sort-cover {
   display: -webkit-flex;
   display: -moz-flex;

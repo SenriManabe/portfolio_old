@@ -326,7 +326,7 @@ img.c-kv-slider__item__cage__img--kv {
 	}
 	.c-kv-slider__item__cage__text {
 		width: 85%;
-		left: 50%;
+		left: 52%;
 		transform: translate(-50%, -50%);
 	}
 	.c-kv-slider__tag {
@@ -352,5 +352,18 @@ img.c-kv-slider__item__cage__img--kv {
 	}
 	.c-kv-slider__read {
 		display: none;
+	}
+	.c-kv-slider-pn__item {
+		width: 20px;
+		height: 20px;
+		border: 0px;
+		border-top: solid 4px rgba(255,255,255,.5);
+		border-right: solid 4px rgba(255,255,255,.5);
+		&:first-child {
+			left: 10px;
+		}
+		&:last-child {
+			right: 10px;
+		}
 	}
 }
