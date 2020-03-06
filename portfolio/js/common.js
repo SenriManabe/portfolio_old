@@ -6,7 +6,10 @@ var kvSlider = '.js-kv-slider',
 	$ajaxLink = $(ajaxLink),
 	ajaxChange = '.js-ajax-change',
 	$ajaxChange = $(ajaxChange),
-	count =  0;
+	slideNav = '.js-slider-nav',
+	$slideNav = $(slideNav),
+	sliderPn = '.js-slider-pn',
+	count = 0;
 
 // SPのGnavi設定
 function menu(){
@@ -16,30 +19,44 @@ function menu(){
 	});
 }
 
-// fade slider設定
-function slider(){
-	$(function(){
-		var interval = 5000,
-			length = ($kvSlider.children().length) - 1;
-
-		var timer = setInterval(show, interval);
-		$('.js-count-stop').hover(function(){
-			clearInterval(timer);
-	    }, function(){
-			timer = setInterval(show, interval);
-	    })
-		function show(){
-			$kvSlider.children().eq(count).removeClass('is-active');
-			$kvSlider.children().eq(count).next().addClass('is-active');
-			if (count == length) {
-				count = 0;
-				$kvSlider.children().eq(count).addClass('is-active');
-			} else {
-				count++;
-			}
-		}
-	});
+function sliderContents(){
+	$kvSlider.children().removeClass('is-active');
+	$kvSlider.children().eq(count).addClass('is-active');
 }
+
+// fade slider設定
+var interval = 5000,
+	length = ($kvSlider.children().length) - 1;
+
+$(document).on('click', slideNav, function() {
+	count = $(this).index();
+
+	$slideNav.removeClass('is-active');
+	$(this).addClass('is-active');
+
+	sliderContents();
+});
+
+$(document).on('click', sliderPn, function() {
+	var index = $(this).index();
+	if (index == 1) {
+		if (count != 4) {
+			count++;
+		} else {
+			count = 0;
+		}
+	} else {
+		if (count != 0) {
+			count--;
+		} else {
+			count = 4;
+		}
+	}
+	sliderContents();
+	$slideNav.removeClass('is-active');
+	$slideNav.eq(count).addClass('is-active');
+});
+
 
 // view height設定
 function vhConf(){
@@ -77,14 +94,19 @@ function getPage(elm){
 		success: function(data){
 			$ajaxChange.html(data).fadeIn(300);
 			history.pushState(null, null, elm);
+			clearInterval(timer);
 		},
 		error:function() {
 			console.log('ERROR!!!!');
 		}
 	});
 }
+$(document).ajaxComplete(function() {
+	if ($kvSlider.legth == 1) {
+		show();
+	}
+});
 
 /** 初回ロード時にコールバックを実行 **/
 menu();
-// slider();
 vhConf();
