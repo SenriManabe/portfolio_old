@@ -370,16 +370,12 @@
 	}
 }
 
-/** ふわっとアニメーション設定 **/
+/** ↓ ここからふわっとアニメーション設定 ↓ **/
 @mixin animationValue( $name, $duration, $function, $delay, $count, $state){
 	animation: $name $duration+s $function $delay+s $count $state;
 }
 @for $cnt from 1 through 6{
-// ↓nth-child の中の数字を #{$cnt} として現在の繰り返しているカウント数にします
 	.c-contents-works-list__item:nth-child(#{$cnt}){
-		// ↓ include で animation プロパティを定義した mixin を呼び出す。
-		// ↓現在のカウント数（$cnt）に少数値をかけた値を $delay 
-		// ↓に指定することで時間差をつけることができる
 		@include animationValue(fadeContents01, .3, ease-in-out, $cnt * 0.3 , 1, forwards);
 	}
 }
@@ -393,12 +389,12 @@
 		top: 0;
 	}
 }
-
 @mixin keyframes($name) {
 	@keyframes #{$name} {
 		@content;
 	} 
 }
+/** ↑ ここまでふわっとアニメーション設定 ↑ **/
 
 .c-contents-cover--timeline {
 	width: 100%;
