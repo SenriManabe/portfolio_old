@@ -29,6 +29,8 @@ function sliderContents(){
 var interval = 5000,
 	length = ($kvSlider.children().length) - 1;
 
+
+// slider設定 -navigation-
 $slideNav.on('click', function() {
 	count = $(this).index();
 
@@ -37,7 +39,7 @@ $slideNav.on('click', function() {
 
 	sliderContents();
 });
-
+// slider設定 -arrow-
 $sliderPn.on('click', function() {
 	var index = $(this).index();
 	if (index == 1) {
@@ -53,11 +55,50 @@ $sliderPn.on('click', function() {
 			count = 4;
 		}
 	}
-	console.log(index);
 	sliderContents();
 	$slideNav.removeClass('is-active');
 	$slideNav.eq(count).addClass('is-active');
 });
+
+// slider設定 -swipe-
+$kvSlider.on('touchstart', onTouchStart); //指が触れたか検知
+$kvSlider.on('touchmove', onTouchMove); //指が動いたか検知
+$kvSlider.on('touchend', onTouchEnd); //指が離れたか検知
+var direction, position;
+
+function onTouchStart(event) {
+	position = getPosition(event);
+	direction = '';
+}
+function onTouchMove(event) {
+	if (position - getPosition(event) > 30) {
+		direction = 'left';
+    } else if (position - getPosition(event) < -30){
+		direction = 'right';
+	}
+}
+function onTouchEnd(event) {
+	if (direction == 'right'){
+		if (count > 0) {
+			count--;
+		} else if(count == 0) {
+			count = 4;
+		}
+	} else if (direction == 'left'){
+		if (count < 4) {
+			count++;
+		} else if(count == 4) {
+			count = 0;
+		}
+	}
+	sliderContents();
+	$slideNav.removeClass('is-active');
+	$slideNav.eq(count).addClass('is-active');
+}
+// 横方向の座標を取得
+function getPosition(event) {
+	return event.originalEvent.touches[0].pageX;
+}
 
 
 // view height設定
