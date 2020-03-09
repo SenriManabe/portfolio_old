@@ -9,6 +9,7 @@ var kvSlider = '.js-kv-slider',
 	slideNav = '.js-slider-nav',
 	$slideNav = $(slideNav),
 	sliderPn = '.js-slider-pn',
+	$sliderPn = $(sliderPn),
 	count = 0;
 
 // SPのGnavi設定
@@ -28,7 +29,7 @@ function sliderContents(){
 var interval = 5000,
 	length = ($kvSlider.children().length) - 1;
 
-$(document).on('click', slideNav, function() {
+$slideNav.on('click', function() {
 	count = $(this).index();
 
 	$slideNav.removeClass('is-active');
@@ -37,21 +38,22 @@ $(document).on('click', slideNav, function() {
 	sliderContents();
 });
 
-$(document).on('click', sliderPn, function() {
+$sliderPn.on('click', function() {
 	var index = $(this).index();
 	if (index == 1) {
-		if (count != 4) {
+		if (count < 4) {
 			count++;
-		} else {
+		} else if(count == 4) {
 			count = 0;
 		}
-	} else {
-		if (count != 0) {
+	} else if(index == 0) {
+		if (count > 0) {
 			count--;
-		} else {
+		} else if(count == 0) {
 			count = 4;
 		}
 	}
+	console.log(index);
 	sliderContents();
 	$slideNav.removeClass('is-active');
 	$slideNav.eq(count).addClass('is-active');
@@ -86,6 +88,10 @@ $(document).on('click', ajaxLink, function(event) {
 	});
 });
 
+$(document).ajaxComplete(function() {
+	count = 0;
+});
+
 function getPage(elm){
 	$.ajax({
 		type: 'GET',
@@ -100,11 +106,6 @@ function getPage(elm){
 		}
 	});
 }
-$(document).ajaxComplete(function() {
-	if ($kvSlider.legth == 1) {
-		show();
-	}
-});
 
 /** 初回ロード時にコールバックを実行 **/
 menu();
