@@ -10,6 +10,8 @@ var kvSlider = '.js-kv-slider',
 	$slideNav = $(slideNav),
 	sliderPn = '.js-slider-pn',
 	$sliderPn = $(sliderPn),
+	kvSliderWorks = '.js-kv-slider--works',
+	$kvSliderWorks = $(kvSliderWorks),
 	count = 0;
 
 // SPのGnavi設定
@@ -100,6 +102,37 @@ function getPosition(event) {
 	return event.originalEvent.touches[0].pageX;
 }
 
+// Works Fade Contents
+function worksContents(event) {
+	var count = 0,
+		interval = 5000,
+		length = ($kvSliderWorks.children().length) - 1;
+
+	var timer = setTimeout(show, interval);
+	$('.js-count-stop').hover(function(){
+		clearTimeout(timer);
+	}, function(){
+		timer = setTimeout(show, interval);
+	});
+
+	function show(){
+		var timer = setTimeout(show, interval);
+		if (length > 0) {
+			$kvSliderWorks.children().eq(count).removeClass('is-active');
+			$kvSliderWorks.children().eq(count).next().addClass('is-active');
+			if (count == length) {
+				count = 0;
+				$kvSliderWorks.children().eq(count).addClass('is-active');
+			} else {
+				count++;
+			}
+		} else {
+			count = 0;
+			clearTimeout(timer);
+		}
+	}
+}
+
 
 // view height設定
 function vhConf(){
@@ -120,9 +153,11 @@ $(window).on('popstate', function(event){
 	});
 });
 
-$(document).on('click', ajaxLink, function(event) {
+$ajaxLink.on('click', function(event) {
 	event.preventDefault();
 	var link = $(this).attr("href");
+	
+	history.pushState(null, null, link);
 
 	$ajaxChange.fadeOut(300, function() {
 		getPage(link);
@@ -140,7 +175,7 @@ function getPage(elm){
 		dataType: 'html',
 		success: function(data){
 			$ajaxChange.html(data).fadeIn(300);
-			history.pushState(null, null, elm);
+			worksContents();
 		},
 		error:function() {
 			console.log('ERROR!!!!');
@@ -150,4 +185,5 @@ function getPage(elm){
 
 /** 初回ロード時にコールバックを実行 **/
 menu();
+worksContents();
 vhConf();
