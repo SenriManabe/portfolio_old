@@ -1,0 +1,17 @@
+{
+  "name": "SeDesPortFolio",
+  "version": "1.0.0",
+  "description": "My exquisite Nuxt.js project",
+  "author": "SenriManabe",
+  "private": true,
+  "scripts": {
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
