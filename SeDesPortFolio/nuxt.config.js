@@ -8,14 +8,9 @@ export default {
   ** Github Pages Route
   */
   // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
-  const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-    router: {
-      base: '/senrimanabe.github.io/'
-    }
-  } : {}
   router: {
-    ...routerBase
-  }
+    base: '/senrimanabe.github.io/'
+  },
   head: {
     title: process.env.npm_package_name || '',
     meta: [
