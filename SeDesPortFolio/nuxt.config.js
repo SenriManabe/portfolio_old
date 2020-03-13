@@ -4,12 +4,14 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
     base: '/senrimanabe.github.io/'
   }
 } : {}
+/*
+** Github Pages Route
+*/
+module.exports = {
+  ...routerBase
+}
 export default {
   mode: 'universal',
-  /*
-  ** Github Pages Route
-  */
-  ...routerBase,
   /*
   ** Headers of the page
   */
