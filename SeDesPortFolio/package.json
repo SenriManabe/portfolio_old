@@ -5,9 +5,13 @@
   "author": "SenriManabe",
   "private": true,
   "scripts": {
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
+  },
+  "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
