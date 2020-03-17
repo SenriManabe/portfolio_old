@@ -1,6 +1,5 @@
 <template>
   <div class="l-main">
-    <lottie :options="defaultOptions" v-on:animCreated="handleAnimation"/>
     <div class="c-contents-cover c-contents-cover--main">
       <section id="top" class="c-contents c-contents--top js-contents swiper-container" v-swiper:mySwiper="swiperOption">
         <div class="c-kv-slider-cover js-kv-slider-cover swiper-wrapper">
@@ -103,13 +102,8 @@
 </template>
 
 <script>
-import Lottie from "@/components/Loading.vue";
-import * as animationData from "@/assets/animation/loading.json";
 
 export default {
-  components: {
-    Lottie
-  },
   data () {
     return {
       swiperOption: {
@@ -126,9 +120,15 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
         }
-      },
-      defaultOptions: { animationData: animationData },
-      animationSpeed: 1
+      }
+    }
+  },
+  watch: {
+    '$route': function(to, from) {
+      console.log('AAA');
+      if(to.path !== from.path) {
+        this.firstLoad = false;
+      }
     }
   },
   methods: {

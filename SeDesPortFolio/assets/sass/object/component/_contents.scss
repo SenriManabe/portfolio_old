@@ -10,11 +10,14 @@
 	opacity: 0;
 	transition: .5s;
 	z-index: -1;
-	background-color: #DEDEDE;
 	&.is-active {
 		visibility: visible;
 		opacity: 1;
 		z-index: 999;
+		background-color: #DEDEDE;
+	}
+	&.is-no-first {
+		display: none;
 	}
 }
 
@@ -42,6 +45,16 @@
 	display: block;
 	width: 100%;
 	height: auto;
+	transition: .3s;
+  animation: fadeInAnimation .6s ease-in-out forwards;
+}
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .c-contents--top {

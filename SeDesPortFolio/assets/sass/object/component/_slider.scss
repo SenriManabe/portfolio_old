@@ -105,6 +105,17 @@ img.c-kv-slider__item__cage__img--kv {
 	color: $_bgWhite;
 	z-index: 3;
 	font-family: 'ABSTER';
+	animation: fadeSldieTop .6s ease-in-out forwards;
+}
+@keyframes fadeSldieTop {
+	0% {
+		opacity: 0;
+		top: 55%;
+	}
+	100% {
+		opacity: 1;
+		top: 50%;
+	}
 }
 
 .c-kv-slider__item__cage__text--no-app {
