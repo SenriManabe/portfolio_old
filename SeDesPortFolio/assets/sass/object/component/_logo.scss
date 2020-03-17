@@ -1,0 +1,13 @@
+.c-logo {
+	display: block;
+}
+
+.c-logo--thanks {
+	text-align: center;
+}
+
+@media screen and (min-width:320px) and (max-width:959px) {
+	.c-logo__item {
+		width: 120px;
+	}
+}
