@@ -1,5 +1,12 @@
+// `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/SeDesPortFolio/'
+  }
+} : {}
 
 export default {
+  ...routerBase,
   mode: 'spa',
   /*
   ** Headers of the page
@@ -12,7 +19,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/SeDesPortFolio/favicon.ico' }
     ]
   },
   /*
