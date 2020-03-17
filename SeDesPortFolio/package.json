@@ -1,7 +1,7 @@
 {
   "name": "SeDesPortFolio",
   "version": "1.0.0",
-  "description": "My slick Nuxt.js project",
+  "description": "デザイナーSeDesのポートフォリオサイトです。対応可能サービスや過去の実績、どんなコンセプトでデザインをしているかをご紹介しています。誰かに何かを伝える時には、「無駄がなく、簡潔に、相手にわかるように」伝えるのが最適だと思っています。",
   "author": "SenriManabe",
   "private": true,
   "scripts": {
