@@ -1,7 +1,7 @@
 <template>
   <div class="c-contents-cover c-contents-cover--main">
     <section id="top" class="c-contents js-contents">
-      <div class="c-kv-slider-cover">
+      <div class="c-kv-slider-cover c-kv-slider-cover--oh">
         <div class="c-kv-slider c-kv-slider--works is-active">
           <div class="c-kv-slider__item">
             <div class="c-kv-slider__item__cage c-kv-slider__item__cage--no-app">

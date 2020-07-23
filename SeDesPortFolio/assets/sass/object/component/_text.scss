@@ -33,6 +33,43 @@
 	}
 }
 
+.c-text--timeline {
+	padding: 25px;
+	@include fsize(18);
+	font-family: 'Noto Sans CJK JP','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	font-weight: normal;
+	text-align: left;
+	line-height: 1.5;
+	color: #4f4f4f;
+	span {
+		@include fsize(36);
+	}
+}
+
+.c-text--title-read {
+	display: block;
+	width: 1200px;
+	position: relative;
+	margin: 0 auto 50px;
+	@include fsize(24);
+	&:before,
+	&:after {
+		content: "";
+		width: calc(50% - 186px);
+		height: 1px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background-color: #666;
+	}
+	&:before {
+		left: 0;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
 @media screen and (min-width:320px) and (max-width:959px) {
 	.c-text--item {
 		&:first-child {

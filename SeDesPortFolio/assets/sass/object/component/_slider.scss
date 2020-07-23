@@ -5,6 +5,9 @@
 	height: calc(var(--vh, 1vh) * 100);
 	position: relative;
 	transform: translate3d(0px, 0px, 0px);
+	&--oh {
+		overflow: hidden;
+	}
 }
 img.c-kv-slider__img {
 	display: block;

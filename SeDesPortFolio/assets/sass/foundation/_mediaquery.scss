@@ -1,9 +1,6 @@
 $mq-breakpoints: (
-  'xsmall': 320px,
-  'small' : 600px,
-  'medium': 768px,
-  'large' : 1024px,
-  'xlarge': 1120px,
+  'sp' : 480px,
+  'pc' : 1024px,
 );
 
 @mixin mq($breakpoint: large) {
