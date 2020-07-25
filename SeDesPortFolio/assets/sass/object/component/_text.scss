@@ -91,4 +91,18 @@
 			}
 		}
 	}
+	.c-text--timeline {
+		@include fsize(16);
+		span {
+			@include fsize(24);
+		}
+	}
+	.c-text--title-read {
+		width: 100%;
+		@include fsize(18);
+		&:before,
+		&:after {
+			width: calc(50% - 136px);
+		}
+	}
 }

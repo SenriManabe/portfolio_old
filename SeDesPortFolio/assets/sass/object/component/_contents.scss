@@ -384,6 +384,7 @@
 }
 
 .c-contents-works-list--timeline {
+	display: block;
 	position: relative;
 	margin-bottom: 130px;
 	&:before {
@@ -398,13 +399,32 @@
 		border-radius: 12.5px;
 		background-color: #4f4f4f;
 	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	&:nth-child(even) {
+		.c-contents-works-list__year {
+			float: right;
+			text-align: left;
+		}
+		.c-contents-works-list__item {
+			float: left;
+		}
+	}
 }
 
 .c-contents-works-list--aic {
 	align-items: center;
+	position: relative;
 	&:before {
 		top: 50%;
 		transform: translate3d(-50%, -50%, 0);
+	}
+	.c-contents-works-list__year {
+		position: relative;
+		top: 70px;
 	}
 }
 
@@ -413,14 +433,14 @@
 	width: calc(50% - 50px);
 	text-align: left;
 	@include fsize(72);
-	&--right {
-		text-align: right;
-	}
+	float: left;
+	text-align: right;
 }
 
 .c-content_flex__inner--timeline {
 	display: block;
 	width: calc(50% - 50px);
+	float: right;
 	.c-contents-works-list__item--timeline {
 		width: 100%;
 		margin: 0 0 50px 100px;
@@ -439,16 +459,13 @@
 	top: 30px;
 	opacity: 0;
 	box-shadow: 6px 6px 12px #aaa, -6px -6px 12px rgba(255, 255, 255, .5);
-	&:nth-child(2n) {
-		margin-left: 50px;
-	}
+	float: right;
 	&:nth-child(3),
 	&:nth-child(4) {
 		margin-top: 50px;
 		margin-bottom: 50px;
 	}
 	&:last-child {
-		display: flex;
 		@include fsize(30);
 		font-family: 'ABSTER';
 		a {
@@ -470,17 +487,6 @@
 	}
 	&--timeline {
 		width: calc(50% - 50px);
-		&:nth-child(2n) {
-			margin-left: 100px;
-		}
-		&--left {
-			&:first-child {
-				margin-right: 100px;
-			}
-			&:nth-child(2n) {
-				margin-left: 0px;
-			}
-		}
 	}
 }
 
@@ -662,6 +668,35 @@
 		}
 		&:active {
 			box-shadow: inset 3px 3px 6px #aaa, inset -3px -3px 6px rgba(255, 255, 255, .5);
+		}
+	}
+	.c-contents-works-list--timeline,
+	.c-contents-works-list--timeline:nth-child(even) {
+		margin-bottom: 100px;
+		.c-contents-works-list__year,
+		.c-contents-works-list__item {
+			top: auto;
+			float: none;
+		}
+		.c-contents-works-list__year {
+			@include fsize(35);
+			margin-bottom: 25px;
+			text-align: left;
+		}
+	}
+	.c-contents-works-list--aic {
+		align-items: center;
+		position: relative;
+		&:before {
+			top: 0;
+			transform: translate3d(-50%, 0, 0);
+		}
+	}
+	.c-content_flex__inner--timeline {
+		float: none;
+		width: 100%;
+		.c-contents-works-list__item:nth-child(1) {
+			margin-left: 0;
 		}
 	}
 }
