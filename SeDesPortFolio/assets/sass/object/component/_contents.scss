@@ -679,16 +679,42 @@
 			float: none;
 		}
 		.c-contents-works-list__year {
-			@include fsize(35);
-			margin-bottom: 25px;
+			display: block;
+			width: 100%;
+			position: relative;
+			@include fsize(30);
+			margin: 0 auto 50px;
 			text-align: left;
+			background-color: #dedede;
+			text-align: center;
+			&:before,
+			&:after {
+				content: "";
+				width: calc(50% - 70px);
+				height: 1px;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background-color: #bbb;
+			}
+			&:before {
+				left: 0;
+			}
+			&:after {
+				right: 0;
+			}
+		}
+		&:before {
+			width: 15px;
+			height: 15px;
+			top: 48px;
 		}
 	}
 	.c-contents-works-list--aic {
 		align-items: center;
 		position: relative;
 		&:before {
-			top: 0;
+			top: 48px;
 			transform: translate3d(-50%, 0, 0);
 		}
 	}
