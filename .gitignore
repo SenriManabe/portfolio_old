@@ -1,4 +1,6 @@
 css/*.map
 sass/.sass-cache/*
 portfolio/renewal/sass/.sass-cache/*
-./_nuxt
+_nuxt/*
+.nuxt/*
+SeDesPortFolio/*
