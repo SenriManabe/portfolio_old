@@ -381,12 +381,14 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .c-contents-works-list--timeline {
 	display: block;
 	position: relative;
 	margin-bottom: 130px;
+	justify-content: inherit;
 	&:before {
 		content: "";
 		display: block;
@@ -403,6 +405,12 @@
 		content: "";
 		display: block;
 		clear: both;
+	}
+	.c-contents-works-list__year {
+		float: left;
+	}
+	.c-contents-works-list__item {
+		float: right;
 	}
 	&:nth-child(even) {
 		.c-contents-works-list__year {
@@ -459,7 +467,6 @@
 	top: 30px;
 	opacity: 0;
 	box-shadow: 6px 6px 12px #aaa, -6px -6px 12px rgba(255, 255, 255, .5);
-	float: right;
 	&:nth-child(3),
 	&:nth-child(4) {
 		margin-top: 50px;
