@@ -17,7 +17,7 @@
                 <p class="c-kv-slider__read">とあるカーシェアアプリのリニューアルデザイン案です。<br/>iOS&AndroidアプリUX設計、UIデザインを担当しました。</p>
                 <NuxtLink to="/works/car-share/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</NuxtLink>
               </div>
-              <img src="~/assets/img/kv/car-share.jpg" alt="car share" class="c-kv-slider__img">
+              <img src="~/assets/img/kv/car-share.jpg" alt="HAKOBIYA" class="c-kv-slider__img">
             </div>
           </div>
           <div class="c-kv-slider c-kv-slider--main js-kv-slider swiper-slide">

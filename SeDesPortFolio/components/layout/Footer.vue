@@ -11,7 +11,7 @@ export default {
   //↓ES5までの記法
   data: function() {
     var path = this.$route.path
-    if (path.match(/^\/works/) || path.match(/^\/timeline/)) {
+    if (path.match(/^\/works/) || path.match(/^\/timeline/) || path.match(/^\/about/)) {
       return {
         classTop: false,
         classTopCover: false
@@ -27,7 +27,7 @@ export default {
   '$route': function(to, from) {
       if(to.path !== from.path) {
         var path = $nuxt.$route.path
-        if (path.match(/^\/works/) || path.match(/^\/timeline/)) {
+        if (path.match(/^\/works/) || path.match(/^\/timeline/) || path.match(/^\/about/)) {
           this.classTop = false
           this.classTopCover = false
         } else {

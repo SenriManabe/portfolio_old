@@ -16,6 +16,7 @@
       <li class="c-nav__item"><NuxtLink to="/" class="c-nav__item__link js-ajax-link">TOP</NuxtLink></li>
       <li class="c-nav__item"><NuxtLink to="/works/" class="c-nav__item__link js-ajax-link">WORKS</NuxtLink></li>
       <li class="c-nav__item"><NuxtLink to="/timeline/" class="c-nav__item__link js-ajax-link">TIMELINE</NuxtLink></li>
+      <li class="c-nav__item"><NuxtLink to="/about/" class="c-nav__item__link js-ajax-link">ABOUT</NuxtLink></li>
     </ul>
   </header>
 </template>

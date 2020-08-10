@@ -1,72 +1,56 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        nuxtTest
-      </h1>
-      <h2 class="subtitle">
-        My stylish Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="c-contents-cover c-contents-cover--main">
+    <section id="top" class="c-contents js-contents">
+      <div class="c-kv-slider-cover c-kv-slider-cover--oh c-kv-slider-cover--about">
+        <div class="c-kv-slider c-kv-slider--works is-active">
+          <div class="c-kv-slider__item">
+            <div class="c-kv-slider__item__cage__text c-kv-slider__item__cage__text--no-app">
+              <p class="c-kv-slider__tag">ABOUT ME</p>
+              <h2 class="c-kv-slider__title">SENRI MANABE</h2>
+              <p class="c-kv-slider__read">
+                いろんな所でいろんなデザインをやってます。<br/>
+                アプリ/Web/業務システム/ロゴ/チラシ/Webバナー/新聞広告などなど
+              </p>
+            </div>
+            <img src="~/assets/img/about/about.png" alt="car share" class="c-kv-slider__img">
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="c-kv-slider-cover c-kv-slider-cover--oh c-kv-slider-cover--about">
+        <div class="c-kv-slider c-kv-slider--works is-active">
+          <div class="c-kv-slider__item">
+            <div class="c-kv-slider__item__cage__text c-kv-slider__item__cage__text--no-app">
+              <p class="c-kv-slider__tag">HOBBY</p>
+              <h2 class="c-kv-slider__title">GAME/CAT/TRAINING</h2>
+              <p class="c-kv-slider__read">
+                趣味はゲーム、愛猫吸い、筋トレです。<br/>
+                ゲームはWARFRAME/FF14/MHW:I/など<br/>
+                愛猫はラグドールの女の子で名前はフェルナ。とても可愛いです。<br/>
+                トレーニングは主にウェイトトレーニングをやっています。
+              </p>
+            </div>
+            <img src="~/assets/img/about/hobby.png" alt="car share" class="c-kv-slider__img">
+          </div>
+        </div>
+      </div>
+      <div class="c-kv-slider-cover c-kv-slider-cover--oh c-kv-slider-cover--about">
+        <div class="c-kv-slider c-kv-slider--works is-active">
+          <div class="c-kv-slider__item">
+            <div class="c-kv-slider__item__cage__text c-kv-slider__item__cage__text--no-app">
+              <p class="c-kv-slider__tag">WORK</p>
+              <h2 class="c-kv-slider__title">DESIGN/FRONTEND</h2>
+              <p class="c-kv-slider__read">
+                本当に至るところでデザインをしています。<br/>
+                自宅だったりオフィスだったりカフェだったり自然の中だったり。<br/>
+                仕事としてできる範囲は、アプリ/Web/業務システム/ロゴ/チラシ/Webバナー/新聞広告などなど<br/>
+                フロントエンドエンジニアも兼任しているので、HTML/CSS/JSでのサイト作成も可能です。<br/>
+                このサイトもVueJSを使い作成しています。
+              </p>
+            </div>
+            <img src="~/assets/img/about/design.png" alt="car share" class="c-kv-slider__img">
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
-
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
