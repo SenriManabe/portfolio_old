@@ -1,9 +1,10 @@
 .c-footer-cover {
-	display: block;
+	display: flex;
 	position: relative;
-	padding: 0 0 50px;
+	padding: 0 50px 50px;
 	line-height: 1;
-	text-align: center;
+	text-align: right;
+	align-items: center;
 	>:last-child {
 		margin-left: auto;
 	}
@@ -15,4 +16,20 @@
 
 .c-footer-item {
 	text-align: left;
+}
+
+.c-footer__link {
+	text-align: left;
+}
+
+.c-footer__link__list {
+	display: inline-block;
+	@include fsize(14);
+	margin-right: 50px;
+	a {
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }

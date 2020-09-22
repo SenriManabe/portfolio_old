@@ -1,14 +1,14 @@
 <template>
   <div>
     <loading :options="defaultOptions" v-on:animCreated="handleAnimation" v-show="firstLoad"/>
-  	<Header />
+  	<!-- <Header /> -->
     <nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
-	import Header from "@/components/layout/Header.vue";
+	// import Header from "@/components/layout/Header.vue";
 	import Footer from "@/components/layout/Footer.vue";
   import Loading from "@/components/Loading.vue";
   import * as animationData from "@/assets/animation/loading.json";
@@ -16,7 +16,7 @@
 	export default {
 		components: {
       Loading,
-			Header,
+			// Header,
 			Footer
 		},data () {
       return {

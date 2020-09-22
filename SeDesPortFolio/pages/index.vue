@@ -1,140 +1,99 @@
 <template>
   <div class="l-main">
     <div class="c-contents-cover c-contents-cover--main">
-      <section id="top" class="c-contents c-contents--top js-contents swiper-container" v-swiper:mySwiper="swiperOption">
-        <div class="c-kv-slider-cover js-kv-slider-cover swiper-wrapper">
-          <div class="c-kv-slider c-kv-slider--main is-active is-active-kv js-kv-slider swiper-slide">
-            <div class="c-kv-slider__item">
-              <div class="c-kv-slider__item__cage">
-                <NuxtLink to="/works/car-share/" class="c-kv-slider__link js-count-stop js-ajax-link">
-                  <img src="~/assets/img/kv/car-share_img.png" alt="car share app" class="c-kv-slider__item__cage__img">
-                </NuxtLink>
-                <img src="~/assets/img/kv/car-share.jpg" alt="car share" class="c-kv-slider__item__cage__img--kv">
-              </div>
-              <div class="c-kv-slider__item__cage__text">
-                <p class="c-kv-slider__tag">UIUX DESIGN</p>
-                <h2 class="c-kv-slider__title">CAR SHARE APP RENE<span>W</span>AL</h2>
-                <p class="c-kv-slider__read">とあるカーシェアアプリのリニューアルデザイン案です。<br/>iOS&AndroidアプリUX設計、UIデザインを担当しました。</p>
-                <NuxtLink to="/works/car-share/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</NuxtLink>
-              </div>
-              <img src="~/assets/img/kv/car-share.jpg" alt="HAKOBIYA" class="c-kv-slider__img">
-            </div>
-          </div>
-          <div class="c-kv-slider c-kv-slider--main js-kv-slider swiper-slide">
-            <div class="c-kv-slider__item">
-              <div class="c-kv-slider__item__cage">
-                <NuxtLink to="/works/hakobiya/" class="c-kv-slider__link js-count-stop js-ajax-link">
-                  <img src="~/assets/img/kv/hakobiya_img.png" alt="HAKOBIYA app" class="c-kv-slider__item__cage__img">
-                </NuxtLink>
-              </div>
-              <div class="c-kv-slider__item__cage__text">
-                <p class="c-kv-slider__tag">UIUX DESIGN</p>
-                <h2 class="c-kv-slider__title">HAKOBI<span>Y</span>A APP DESIGN</h2>
-                <p class="c-kv-slider__read">「旅を仕事にしよう」というコンセプトを基に、海外旅行者と海外製品がほしい人をマッチングさせるアプリです。<br/>iOS&AndroidアプリUX設計、UIデザインを担当しました。</p>
-                <NuxtLink to="/works/hakobiya/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</NuxtLink>
-              </div>
-              <img src="~/assets/img/kv/hakobiya.jpg" alt="HAKOBIYA" class="c-kv-slider__img">
-            </div>
-          </div>
-          <div class="c-kv-slider c-kv-slider--main js-kv-slider swiper-slide">
-            <div class="c-kv-slider__item">
-              <div class="c-kv-slider__item__cage">
-                <NuxtLink to="/works/lunchiru/" class="c-kv-slider__link js-count-stop js-ajax-link">
-                  <img src="~/assets/img/kv/lunchiru_img.png" alt="LUNCHIRU app" class="c-kv-slider__item__cage__img">
-                </NuxtLink>
-              </div>
-              <div class="c-kv-slider__item__cage__text">
-                <p class="c-kv-slider__tag">UIUX DESIGN</p>
-                <h2 class="c-kv-slider__title">LUNCHIRU APP DESIGN</h2>
-                <p class="c-kv-slider__read">芦屋市との協働によるプロジェクトで、小中学校や保育所の給食の献立表が簡単に見れるアプリです。<br/>iOS&Androidアプリのロゴデザイン、UX設計、UIデザインを担当しました。</p>
-                <NuxtLink to="/works/lunchiru/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</NuxtLink>
-              </div>
-              <img src="~/assets/img/kv/lunchiru.jpg" alt="LUNCHIRU" class="c-kv-slider__img">
-            </div>
-          </div>
-          <div class="c-kv-slider c-kv-slider--main js-kv-slider swiper-slide">
-            <div class="c-kv-slider__item">
-              <div class="c-kv-slider__item__cage c-kv-slider__item__cage--no-app">
-                <NuxtLink to="/works/darkforce/" class="c-kv-slider__link js-count-stop js-ajax-link">
-                  <img src="~/assets/img/works/darkforce/darkforce_item01.png" alt="DarkForce LOGO" class="c-kv-slider__item__cage__img">
-                </NuxtLink>
-              </div>
-              <div class="c-kv-slider__item__cage__text c-kv-slider__item__cage__text--no-app">
-                <p class="c-kv-slider__tag">LOGO DESIGN</p>
-                <h2 class="c-kv-slider__title">DARK FORCE</h2>
-                <p class="c-kv-slider__read">自分が代表(？)をやっている、とあるゲームサークルのロゴを作成しました。<br/>ロゴデザイン・運営を担当しました。</p>
-                <NuxtLink to="/works/darkforce/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</NuxtLink>
-              </div>
-              <img src="~/assets/img/kv/darkforce.png" alt="DarkForce" class="c-kv-slider__img">
-            </div>
-          </div>
-          <div class="c-kv-slider c-kv-slider--main js-kv-slider swiper-slide">
-            <div class="c-kv-slider__item">
-              <div class="c-kv-slider__item__cage c-kv-slider__item__cage--no-app">
-                <NuxtLink to="/works/hakobiya-logo/" class="c-kv-slider__link js-count-stop js-ajax-link">
-                  <img src="~/assets/img/kv/hakobiya-logo_img.png" alt="HAKOBIYA LOGO" class="c-kv-slider__item__cage__img">
-                </NuxtLink>
-              </div>
-              <div class="c-kv-slider__item__cage__text c-kv-slider__item__cage__text--no-app">
-                <p class="c-kv-slider__tag">LOGO DESIGN</p>
-                <h2 class="c-kv-slider__title">HAKOBIYA</h2>
-                <p class="c-kv-slider__read">UIデザインも手がけたサービスのリニューアルロゴ案を作成しました。<br>HとAを使い、地球をモチーフにこのロゴを作成しました。</p>
-                <NuxtLink to="/works/hakobiya-logo/" class="c-kv-slider__link js-count-stop js-ajax-link">READ MORE</NuxtLink>
-              </div>
-              <img src="~/assets/img/kv/hakobiya-logo.png" alt="HAKOBIYA" class="c-kv-slider__img">
-            </div>
+      <section id="top" class="c-contents c-contents--top js-contents">
+        <div class="c-kv">
+          <img src="~/assets/img/logo.svg" alt="SeDes" class="c-kv__logo">
+          <div class="c-kv__img">
+            <a href="/works/car-share/">
+              <img id="js-move-img" src="~/assets/img/kv/kv.png" alt="car share" class="c-kv__img__item" width="489">
+            </a>
           </div>
         </div>
-        <ul class="c-kv-slider-nav">
-          <li class="c-kv-slider-nav__item"></li>
-          <li class="c-kv-slider-nav__item"></li>
-          <li class="c-kv-slider-nav__item"></li>
-          <li class="c-kv-slider-nav__item"></li>
-          <li class="c-kv-slider-nav__item"></li>
-        </ul>
-        <div class="c-kv-slider-pn">
-          <span class="c-kv-slider-pn__item swiper-button-prev"></span>
-          <span class="c-kv-slider-pn__item swiper-button-next"></span>
+      </section>
+      <section id="works" class="c-contents c-contents--works js-contents">
+        <h2 class="c-title c-title--works-index c-title--works-index--center">INVOLVED IN PRODUCTS</h2>
+        <div class="c-work-item-cover">
+          <div class="c-work-item c-work-item--car-share">
+            <a href="/works/car-share/">
+                <h4 class="c-title c-title--works-item">CAR CHARE<br/>APP</h4>
+                <img id="js-move-img" src="~/assets/img/kv/car-share_img.png" alt="car share" class="c-kv__img__item" width="211">
+              </a>
+          </div>
+
+          <div class="c-work-item c-work-item--darkforce">
+            <a href="/works/darkforce/">
+                <h4 class="c-title c-title--works-item">DARK FORCE<br/>LOGO</h4>
+                <img id="js-move-img" src="~/assets/img/kv/darkforce_img.png" alt="darkforce" class="c-kv__img__item" width="282">
+              </a>
+          </div>
+
+          <div class="c-work-item c-work-item--lunchiru">
+            <a href="/works/lunchiru/">
+                <h4 class="c-title c-title--works-item">LUNCHIRU<br/>APP</h4>
+                <img id="js-move-img" src="~/assets/img/kv/lunchiru_img.png" alt="lunchiru" class="c-kv__img__item" width="211">
+              </a>
+          </div>
+
+          <div class="c-work-item c-work-item--hakobiya">
+            <a href="/works/hakobiya/">
+                <h4 class="c-title c-title--works-item">HAKOBIYA<br/>APP</h4>
+                <img id="js-move-img" src="~/assets/img/kv/hakobiya_img.png" alt="car share" class="c-kv__img__item" width="211">
+              </a>
+          </div>
+
+          <div class="c-work-item c-work-item--hakobiya-logo">
+            <a href="/works/hakobiya-logo/">
+                <h4 class="c-title c-title--works-item">HAKOBIYA<br/>LOGO</h4>
+                <img id="js-move-img" src="~/assets/img/kv/hakobiya-logo_img.png" alt="car share" class="c-kv__img__item" width="296">
+              </a>
+          </div>
         </div>
+        <a href="/works/" class="c-link c-link--more">AND MORE</a>
+      </section>
+      <section id="about" class="c-contents c-contents--about js-contents">
+        <h2 class="c-title c-title--about">
+          <span>ABOUT ME</span>
+          SENRI MANABE
+        </h2>
+        <p class="c-text c-text--read">
+          いろんな所でいろんなデザインをやってます。<br/>
+          アプリ/Web/業務システム/ロゴ/チラシ/Webバナー/新聞広告などなど。<br/>
+          ご要望、ご依頼の方は「<a href="mailto:senri.dr@gmail.com">senri.dr@gmail.com</a>」までよろしくお願い致します。
+        </p>
       </section>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  data () {
-    return {
-      swiperOption: {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        pagination: { //ページネーション設定
-          el: '.c-kv-slider-nav',
-          clickable: true
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+  //↓ES5までの記法
+  data: function () {
+    if (process.client) {
+      return {
+        itemMove() {
+          let title = document.getElementById('js-move-img');
+          document.addEventListener('mousemove', event => {
+            var x = Math.round(event.pageX / 150);
+            var y = Math.round(event.pageY / 150);
+
+            title.style.marginLeft = -x +'px';
+            title.style.marginTop = -y +'px';
+          });
         }
       }
     }
   },
   watch: {
     '$route': function(to, from) {
-      console.log('AAA');
       if(to.path !== from.path) {
-        this.firstLoad = false;
+        this.itemMove();
       }
     }
   },
-  methods: {
-    handleAnimation: function(anim) {
-      this.anim = anim;
-    }
-  }
+  mounted() {
+    this.itemMove();
+  },
 }
 </script>

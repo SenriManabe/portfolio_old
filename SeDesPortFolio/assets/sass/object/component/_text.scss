@@ -106,3 +106,16 @@
 		}
 	}
 }
+
+.c-text--read {
+	position: relative;
+	z-index: 1;
+	@include fsize(24);
+	text-align: center;
+	line-height: 2;
+	color: #fff;
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+}

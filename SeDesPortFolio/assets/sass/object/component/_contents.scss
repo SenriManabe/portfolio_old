@@ -57,13 +57,6 @@
 	}
 }
 
-.c-contents--top {
-	width: 100vw;
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
-}
-
 .c-contents--component {
 	padding: 100px;
 	&--gray {
@@ -747,5 +740,157 @@
 		bottom: 0;
 		margin: 0 auto;
 		max-height: 75vh;
+	}
+}
+
+//* リニューアル分 *//
+.c-contents {
+	width: 100%;
+	padding: 400px 0;
+	height: auto;
+}
+
+.c-contents--top {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+}
+
+.c-contents--works {
+	position: relative;
+}
+
+.c-contents--about {
+	display: block;
+	width: 1080px;
+	padding: 0 0 125px;
+	margin: 0 auto 200px;
+	position: relative;
+	background-image: url('../img/about/about.png');
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 100%;
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, .2);
+		z-index: 0;
+	}
+}
+
+.c-work-item-cover {
+	position: relative;
+	width: calc(100% - 200px);
+	height: 2779px;
+	margin: 0 auto;
+}
+
+.c-work-item {
+	display: block;
+	width: 480px;
+	height: 600px;
+	position: absolute;
+	box-shadow: 25px 25px 50px #B9B9B9;
+	transition: .3s;
+	&:hover {
+		box-shadow: 12.5px 12.5px 25px #B9B9B9;
+		.c-title--works-item {
+			opacity: 1;
+		}
+	}
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	&--darkforce,
+	&--hakobiya-logo {
+		width: 600px;
+		height: 480px;
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: 100%;
+	}
+	&--car-share {
+		top: 0;
+		left: calc(50% - (240px + 40px));
+		transform: scale(1) translateX(-50%);
+		background-color: #273654;
+		&:hover {
+			transform: scale(.99) translateX(-50%);
+			.c-title--works-item {
+				margin-right: -50px;
+			}
+		}
+		.c-title--works-item {
+			right: -150px;
+		}
+	}
+	&--darkforce {
+		top: 500px;
+		left: calc(50% + (300px + 50px));
+		transform: scale(1) translateX(-50%);
+		background-image: url('../img/kv/darkforce.png');
+		&:hover {
+			transform: scale(.99) translateX(-50%);
+			.c-title--works-item {
+				margin-left: -50px;
+			}
+		}
+		.c-title--works-item {
+			left: -150px;
+		}
+	}
+	&--lunchiru {
+		top: 1080px;
+		left: calc(50% + (240px + 120px));
+		transform: scale(1) translateX(-50%);
+		background-color: #f0a900;
+		&:hover {
+			transform: scale(.99) translateX(-50%);
+			.c-title--works-item {
+				margin-left: -50px;
+			}
+		}
+		.c-title--works-item {
+			left: -100px;
+		}
+	}
+	&--hakobiya {
+		top: 1350px;
+		left: calc(50% - (240px + 185px));
+		transform: scale(1) translateX(-50%);
+		background-color: #d95757;
+		&:hover {
+			transform: scale(.99) translateX(-50%);
+			.c-title--works-item {
+				margin-right: -50px;
+			}
+		}
+		.c-title--works-item {
+			right: -150px;
+		}
+	}
+	&--hakobiya-logo {
+		top: 2097px;
+		left: calc(50% - 110px);
+		transform: scale(1) translateX(-50%);
+		background-image: url('../img/kv/hakobiya-logo.png');
+		&:hover {
+			transform: scale(.99) translateX(-50%);
+			.c-title--works-item {
+				margin-right: -50px;
+			}
+		}
+		.c-title--works-item {
+			right: -150px;
+		}
 	}
 }

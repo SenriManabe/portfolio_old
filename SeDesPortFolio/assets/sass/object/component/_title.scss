@@ -41,12 +41,59 @@
 	}
 }
 
-.c-title--works-detail,
 .c-title--works-index {
+	position: relative;
 	font-family: 'ABSTER';
 	@include fsize(32);
-	margin: 140px auto 40px;
+	margin: 0 auto 200px;
 	letter-spacing: 2px;
+	text-align: center;
+	&:before,
+	&:after {
+		content: "";
+		width: calc(50% - 427px);
+		height: 1px;
+		background-color: #4f4f4f;
+		position: absolute;
+		top: 40%;
+		transform: translateY(-50%);
+	}
+	&:before {
+		left: 100px;
+	}
+	&:after {
+		right: 100px;
+	}
+}
+
+.c-title--works-item {
+	position: absolute;
+	top: 50%;
+	/** 左右一のみcontent.scssで設定 **/
+	margin: 0;
+	transform: translateY(-50%);
+	font-family: 'ABSTER';
+	@include fsize(45);
+	color: #fff;
+	text-decoration: underline;
+	line-height: 1.25;
+	opacity: 0;
+	transition: .6s;
+}
+
+.c-title--about {
+	position: relative;
+	padding: 150px 0 100px;
+	font-family: 'ABSTER';
+	@include fsize(50);
+	text-align: center;
+	color: #fff;
+	z-index: 1;
+	span {
+		display: block;
+		margin: 0 auto 50px;
+		@include fsize(35);
+	}
 }
 
 .c-title--timeline {
