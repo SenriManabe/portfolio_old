@@ -36,7 +36,7 @@
               <img src="~/assets/img/kv/hakobiya.jpg" alt="HAKOBIYA" class="c-kv-slider__img">
             </div>
           </div>
-          <div class="c-kv-slider c-kv-slider--main js-kv-slider swiper-slide">
+          <!-- <div class="c-kv-slider c-kv-slider--main js-kv-slider swiper-slide">
             <div class="c-kv-slider__item">
               <div class="c-kv-slider__item__cage">
                 <NuxtLink to="/works/lunchiru/" class="c-kv-slider__link js-count-stop js-ajax-link">
@@ -51,7 +51,7 @@
               </div>
               <img src="~/assets/img/kv/lunchiru.jpg" alt="LUNCHIRU" class="c-kv-slider__img">
             </div>
-          </div>
+          </div> -->
           <div class="c-kv-slider c-kv-slider--main js-kv-slider swiper-slide">
             <div class="c-kv-slider__item">
               <div class="c-kv-slider__item__cage c-kv-slider__item__cage--no-app">

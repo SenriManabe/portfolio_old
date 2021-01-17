@@ -467,6 +467,9 @@
 	top: 30px;
 	opacity: 0;
 	box-shadow: 6px 6px 12px #aaa, -6px -6px 12px rgba(255, 255, 255, .5);
+	&--timeline-link {
+		height: 296px;
+	}
 	&:nth-child(3),
 	&:nth-child(4) {
 		margin-top: 50px;

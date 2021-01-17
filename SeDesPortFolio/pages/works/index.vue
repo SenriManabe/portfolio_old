@@ -16,11 +16,11 @@
                   <img src="~/assets/img/works/thumbs/hakobiya.png" alt="">
                 </NuxtLink>
               </li>
-              <li class="c-contents-works-list__item">
+              <!-- <li class="c-contents-works-list__item">
                 <NuxtLink to="/works/lunchiru/" class="c-contents-works-list__item__link js-ajax-link">
                   <img src="~/assets/img/works/thumbs/lunchiru.png" alt="">
                 </NuxtLink>
-              </li>
+              </li> -->
               <li class="c-contents-works-list__item">
                 <NuxtLink to="/works/darkforce/" class="c-contents-works-list__item__link js-ajax-link">
                   <img src="~/assets/img/works/thumbs/darkforce.png" alt="">
@@ -31,7 +31,7 @@
                   <img src="~/assets/img/works/thumbs/hakobiya-logo.png" alt="">
                 </NuxtLink>
               </li>
-              <li class="c-contents-works-list__item">
+              <li class="c-contents-works-list__item c-contents-works-list__item--timeline-link">
                 <NuxtLink to="/timeline/" class="c-contents-works-list__item__link">GO TO TIMELINE</NuxtLink></li>
             </ul>
           </div>
