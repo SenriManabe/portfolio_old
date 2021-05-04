@@ -1,0 +1,29 @@
+$mq-breakpoints: (
+  'sp' : 480px,
+  'pc' : 1024px,
+);
+
+@mixin mq($breakpoint: large) {
+  @media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media only screen and (orientation:landscape) {
+    @content;
+  }
+}
+
+//使い方
+//.elements {
+//  @include mq {
+//    1024pxまでの幅の場合に適応される
+//  }
+//  @include mq(medium) {
+//    768pxまでの幅の場合に適応される
+//  }
+//  @include mq(xsmall) {
+//    320pxまでの幅の場合に適応される
+//  }
+//}
