@@ -1,0 +1,40 @@
+.c-flex {
+	display: flex;
+}
+
+.c-flex--aic {
+	align-items: center;
+}
+
+.c-flex__item {
+	width: 50%;
+	&:nth-child(2) {
+		padding-left: 139px;
+	}
+  &.c-flex__item--text {
+    &:nth-child(2) {
+      padding: 0 139px;
+    }
+  }
+}
+
+.c-flex__item--img {
+	text-align: center;
+  img {
+    transition: .3s;
+  }
+}
+
+@include mq(sp) {
+  .c-flex__item--img--logo {
+    margin: 108px 0;
+  }
+  .c-flex__item {
+    width: 50%;
+    &.c-flex__item--text {
+      &:nth-child(2) {
+        padding: 30px 20px;
+      }
+    }
+  }
+}

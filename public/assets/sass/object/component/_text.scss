@@ -1,5 +1,8 @@
 .c-text {
 	color: $_colorLink--hover;
+	@include fsize(14);
+	line-height: 2;
+	letter-spacing: 1.4px;
 }
 
 .c-text--category {

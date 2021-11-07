@@ -25,9 +25,9 @@ body {
     line-height: 1;
     color:$_colorText;
     -webkit-text-size-adjust: 100%;
-    background-color: #dedede;
-    color:$_colorLink--hover;
-    font-family: 'Noto Sans JP',sans-serif;
+    background: radial-gradient(85.62% 101.23% at 6% 99.98%, #F5F5F5 0%, #DEDEDE 100%);
+    font-family: 'FashionFetish',sans-serif;
+    border: 1px solid #fff;
 }
 
 a{
@@ -75,4 +75,11 @@ input, button, textarea, select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+@include mq(sp) {
+  html,body {
+    min-height: 100%;
+    height: auto;
+  }
 }

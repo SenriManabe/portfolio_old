@@ -1,0 +1,82 @@
+.c-pn-nav {
+	position: absolute;
+	width: 100vw;
+	height: 258px;
+	bottom: 0;
+	overflow: hidden;
+}
+.c-pn-nav__item {
+	display: block;
+	position: absolute;
+	width: 88px;
+	height: 100%;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	transition: .3s;
+	cursor: pointer;
+	&:first-child {
+		left: 0;
+		transform: translateX(-30px);
+		background-image: url('../img/common/prev_disabled.png');
+		background-position: left bottom;
+	}
+	&:last-child {
+		right: 0;
+		transform: translateX(30px);
+		background-image: url('../img/common/next_disabled.png');
+		background-position: right bottom;
+	}
+	&:hover {
+		&:first-child {
+			transform: translateX(0px);
+			background-image: url('../img/common/prev_active.png');
+		}
+		&:last-child {
+			transform: translateX(0px);
+			background-image: url('../img/common/next_active.png');
+		}
+	}
+}
+
+.c-pn-contents-swip {
+	display: block;
+	position: fixed;
+	width: 226px;
+	height: 88px;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	transition: .3s;
+	cursor: pointer;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transform: translateY(30px);
+	background-image: url('../img/common/contents_swiper_disabled.png');
+	background-position: left bottom;
+	z-index: 2;
+	&:hover {
+		transform: translateY(0px);
+		background-image: url('../img/common/contents_swiper_active.png');
+	}
+}
+
+@include mq(sp) {
+	.c-pn-nav__item {
+		&:first-child {
+			transform: translateX(-45px);
+		}
+		&:last-child {
+			transform: translateX(45px);
+		}
+		&:hover {
+			&:first-child {
+				transform: translateX(0px);
+			}
+			&:last-child {
+				transform: translateX(0px);
+			}
+		}
+	}
+}

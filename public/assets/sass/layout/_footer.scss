@@ -1,13 +1,7 @@
 .l-footer {
-    position: relative;
-    width: 100%;
-    line-height: 1;
-}
-
-.l-footer--top {
-	position: absolute;
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	z-index: 3;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  line-height: 1;
+  text-align: center;
 }

@@ -3,62 +3,19 @@
 	position: relative;
 	&.is-active,
 	&:hover {
-		color: $_colorLink--hover;
-		&:before {
-			content: "";
-			display: block;
-			width: 95%;
-			height: 1px;
-			position: absolute;
-			bottom: -5px;
-			left: 0;
-			background-color: $_colorLink--hover;
-		}
+		text-decoration: none;
 	}
 }
 
 .c-link--main {
 	display: inline-block;
+	position: relative;
 	color: $_colorText;
-	@include fsize(18);
-	&:hover {
-		&:before {
-			content: "";
-			display: block;
-			width: 120%;
-			height: 1px;
-			position: absolute;
-			bottom: -5px;
-			left: -5%;
-			background-color: $_colorText;
-		}
-		&:after {
-			right: -13%;
-		}
-	}
-	&:before {
-		content: "";
-		display: block;
-		width: 120%;
-		height: 1px;
-		position: absolute;
-		bottom: -5px;
-		left: -5%;
-		background-color: $_colorText;
-		transition: .3s;
-	}
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: -6px;
-		right: -10%;
-		display: block;
-		width: 1px;
-		height: 50%;
-		background-color: $_colorText;
-		transform: rotate(-45deg);
-		transition: .3s;
-	}
+	@include fsize(16);
+	letter-spacing: 0.5px;
+	text-shadow: 0 -1px 0 #fff;
+	text-decoration: underline;
+	z-index: 2;
 }
 
 .c-link--center {
